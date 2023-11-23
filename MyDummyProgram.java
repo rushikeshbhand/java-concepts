@@ -1,0 +1,13 @@
+package com.company2;
+
+import java.util.Scanner;
+
+public class MyDummyProgram
+{
+    public static void main(String args[])
+    {
+        Scanner sc=Scanner(System.in);
+        int a=sc1.nextInt();
+        System.out.println("the value is "+a);
+    }
+}

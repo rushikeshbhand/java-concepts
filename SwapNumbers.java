@@ -1,0 +1,23 @@
+class SwapNumbers {
+    public static void main(String[] args) {
+        // Declare and initialize the variables
+        int number1 = 5;           
+        int number2 = 10;
+
+        System.out.println("Before swapping:");
+        System.out.println("Number 1: " + number1);
+        System.out.println("Number 2: " + number2);
+
+        // Swapping the numbers
+        // Using a temporary variable to hold the value of number1
+        int temp = number1;
+        // Assigning the value of number2 to number1
+        number1 = number2;
+        // Assigning the value of the temporary variable to number2
+        number2 = temp;
+
+        System.out.println("\nAfter swapping:");
+        System.out.println("Number 1: " + number1);
+        System.out.println("Number 2: " + number2);
+    }
+}

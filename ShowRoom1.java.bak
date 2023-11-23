@@ -1,0 +1,67 @@
+import java.util.Scanner;
+
+class ShowRoom {
+    // Instance variables to store customer information
+    String name;
+    long mobno;
+    double cost;
+    double dis;
+    double amount;
+
+    // Default constructor to initialize data members
+    ShowRoom() {
+        name = "";
+        mobno = 0;
+        cost = 0.0;
+        dis = 0.0;
+        amount = 0.0;
+    }
+
+    // Method to input customer name, mobile number, and cost
+    void input() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter customer name: ");
+        name = scanner.nextLine();
+        System.out.print("Enter mobile number: ");
+        mobno = scanner.nextLong();
+        System.out.print("Enter cost of purchased items: ");
+        cost = scanner.nextDouble();
+    }
+
+    // Method to calculate the discount based on the cost of purchased items
+    void calculate() {
+        if (cost <= 10000) {
+            dis = cost * 0.05;
+        } else if (cost <= 20000) {
+            dis = cost * 0.10;
+        } else if (cost <= 35000) {
+            dis = cost * 0.15;
+        } else {
+            dis = cost * 0.20;
+        }
+        amount = cost - dis;
+    }
+
+    // Method to display customer name, mobile number, and amount to be paid after discount
+    void display() {
+        System.out.println("\nCustomer Name: " + name);
+        System.out.println("Mobile Number: " + mobno);
+        System.out.println("Amount to be Paid after Discount: Rs. " + amount);
+    }
+}
+
+public class ShowRoom1 {
+    public static void main(String[] args) {
+        // Create an object of the ShowRoom class
+        ShowRoom customer = new ShowRoom();
+
+        // Call the input() method to take customer details as input
+        customer.input();
+
+        // Call the calculate() method to calculate the discount and amount to be paid
+        customer.calculate();
+
+        // Call the display() method to show the customer details and amount to be paid after discount
+        customer.display();
+    }
+}
